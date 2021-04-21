@@ -1,12 +1,18 @@
 package org.example.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity
 public class TodoItem {
 
     private Integer id;
     private String task;
     private Boolean isDone;
 
+    @Id
+    @GeneratedValue
     public Integer getId() {
         return id;
     }
